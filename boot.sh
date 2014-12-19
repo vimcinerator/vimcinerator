@@ -5,5 +5,6 @@ now=$(date +%s)
 folder="builds/build_$now"
 mkdir -p $folder
 cp install.rdf $folder
-zip builds/vc-$now.xpi $folder/*
+cp chrome.manifest $folder
+(cd $folder && zip ../vc-$now.xpi *)
 unzip -t builds/vc-$now.xpi && rm -rf $folder
